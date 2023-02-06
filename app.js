@@ -5,7 +5,7 @@ const port = 3002;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use("/blogs", blogRouter);
+app.use("/api/blogs", blogRouter);
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
