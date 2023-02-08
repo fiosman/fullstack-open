@@ -8,5 +8,5 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/blogs", blogRouter);
 
 app.listen(port, () => {
-  console.log(`Listening on port ${port}`);
+  console.log(`Server started and listening on port ${port}`);
 });
