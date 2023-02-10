@@ -1,8 +1,9 @@
 const express = require("express");
 const blogRouter = express.Router();
+const BlogController = require("../controllers/BlogController");
 
-blogRouter.get("/", (req, res) => {});
-blogRouter.post("/", (req, res) => {});
-blogRouter.delete("/:id", (req, res) => {});
+blogRouter.get("/", BlogController.getAllBlogs);
+blogRouter.post("/", BlogController.createBlog);
+blogRouter.delete("/:id", BlogController.deleteBlog);
 
 module.exports = blogRouter;
