@@ -1,3 +1,5 @@
+const BlogService = require("../services/BlogService");
+
 const getAllBlogs = async (req, res, next) => {
   try {
     const getBlogs = await BlogService.getAllBlogs();
@@ -25,8 +27,4 @@ const createBlog = async (req, res, next) => {
   }
 };
 
-module.exports = {
-  getAllBlogs,
-  deleteBlog,
-  createBlog,
-};
+export { getAllBlogs, deleteBlog, createBlog };
