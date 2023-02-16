@@ -27,4 +27,8 @@ const createBlog = async (req, res, next) => {
   }
 };
 
-export { getAllBlogs, deleteBlog, createBlog };
+module.exports = {
+  getAllBlogs,
+  deleteBlog,
+  createBlog,
+};

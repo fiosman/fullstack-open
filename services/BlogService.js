@@ -19,4 +19,4 @@ const createBlog = async () => {
   }
 };
 
-export { getAllBlogs, deleteBlog, createBlog };
+module.exports = { getAllBlogs, deleteBlog, createBlog };
