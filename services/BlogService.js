@@ -1,5 +1,9 @@
+const Blog = require("../models").blog;
+
 const getAllBlogs = async () => {
   try {
+    const allBlogs = await Blog.findAll();
+    return allBlogs;
   } catch (err) {
     throw err;
   }
