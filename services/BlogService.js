@@ -9,8 +9,14 @@ const getAllBlogs = async () => {
   }
 };
 
-const deleteBlog = async () => {
+const deleteBlog = async (id) => {
   try {
+    await Blog.destroy({
+      where: {
+        id,
+      },
+    });
+    return true;
   } catch (err) {
     throw err;
   }
