@@ -22,8 +22,15 @@ const deleteBlog = async (id) => {
   }
 };
 
-const createBlog = async () => {
+const createBlog = async (blog) => {
+  const { author, url, title } = blog;
   try {
+    const newBlog = await Blog.create({
+      author,
+      url,
+      title,
+    });
+    return newBlog;
   } catch (err) {
     throw err;
   }
