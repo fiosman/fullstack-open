@@ -27,6 +27,15 @@ const createBlog = async (req, res, next) => {
   }
 };
 
+const updateblog = async (req, res, next) => {
+  try {
+    const updatedBlog = await BlogService.updateBlog(req.body);
+    res.json(updatedBlog);
+  } catch (err) {
+    throw err;
+  }
+};
+
 module.exports = {
   getAllBlogs,
   deleteBlog,
