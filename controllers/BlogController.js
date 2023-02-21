@@ -27,7 +27,7 @@ const createBlog = async (req, res, next) => {
   }
 };
 
-const updateblog = async (req, res, next) => {
+const updateBlog = async (req, res, next) => {
   try {
     const updatedBlog = await BlogService.updateBlog(req.body);
     res.json(updatedBlog);
@@ -40,4 +40,5 @@ module.exports = {
   getAllBlogs,
   deleteBlog,
   createBlog,
+  updateBlog,
 };
