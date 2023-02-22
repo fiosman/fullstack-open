@@ -38,6 +38,12 @@ const createBlog = async (blog) => {
 
 const updateBlog = async (blogData) => {
   try {
+    const updatedBlog = Blog.update(blogData, {
+      where: {
+        id: blogData.id,
+      },
+    });
+    return updatedBlog;
   } catch (err) {
     throw err;
   }
