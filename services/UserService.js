@@ -9,6 +9,14 @@ const getAllUsers = async () => {
   }
 };
 
+const createUser = async (name, username) => {
+  try {
+  } catch (err) {
+    throw err;
+  }
+};
+
 module.exports = {
   getAllUsers,
+  createUser,
 };
