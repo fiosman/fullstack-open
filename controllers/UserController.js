@@ -12,8 +12,8 @@ const getAllUsers = async (req, res, next) => {
 const createUser = async (req, res, next) => {
   try {
     const { name, username } = req.body;
-    const allUsers = await UserService.createUser(name, username);
-    res.json(allUsers);
+    const createdUser = await UserService.createUser(name, username);
+    res.json(createdUser);
   } catch (err) {
     throw err;
   }
