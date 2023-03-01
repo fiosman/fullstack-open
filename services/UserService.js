@@ -11,6 +11,8 @@ const getAllUsers = async () => {
 
 const createUser = async (name, username) => {
   try {
+    const createdUser = await User.create({ name, username });
+    return createdUser;
   } catch (err) {
     throw err;
   }
