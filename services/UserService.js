@@ -18,7 +18,7 @@ const createUser = async (name, username) => {
   }
 };
 
-const editUsername = async (username) => {
+const editUsername = async (username, newUserData) => {
   try {
   } catch (err) {
     throw err;
