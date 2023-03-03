@@ -21,6 +21,9 @@ const createUser = async (req, res, next) => {
 
 const editUsername = async (req, res, next) => {
   try {
+    const { username } = req.params;
+    const editedUser = await UserService.editUsername(username);
+    res.json(editedUser);
   } catch (err) {
     throw err;
   }
