@@ -20,6 +20,15 @@ const createUser = async (name, username) => {
 
 const editUsername = async (username, newUserData) => {
   try {
+    const updatedUser = await User.update(
+      { username: newUserData.username },
+      {
+        where: {
+          username: username,
+        },
+      }
+    );
+    return updatedUser;
   } catch (err) {
     throw err;
   }
