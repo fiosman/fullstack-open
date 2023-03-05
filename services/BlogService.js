@@ -1,6 +1,6 @@
 const Blog = require("../models").blog;
 
-const getAllBlogs = async () => {
+const getAllBlogs = async (search) => {
   try {
     const allBlogs = await Blog.findAll();
     return allBlogs;
