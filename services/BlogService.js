@@ -2,7 +2,13 @@ const Blog = require("../models").blog;
 
 const getAllBlogs = async (search) => {
   try {
-    const allBlogs = await Blog.findAll();
+    const allBlogs = await Blog.findAll({
+      where: {
+        title: {
+          [Op.iLike]: `%${search ?? ""}%`,
+        },
+      },
+    });
     return allBlogs;
   } catch (err) {
     throw err;
