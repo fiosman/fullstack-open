@@ -4,9 +4,18 @@ const getAllBlogs = async (search) => {
   try {
     const allBlogs = await Blog.findAll({
       where: {
-        title: {
-          [Op.iLike]: `%${search ?? ""}%`,
-        },
+        [Op.or]: [
+          {
+            title: {
+              [Op.iLike]: `%${search ?? ""}%`,
+            },
+          },
+          {
+            author: {
+              [Op.ilike]: `%${search ?? ""}%`,
+            },
+          },
+        ],
       },
     });
     return allBlogs;
