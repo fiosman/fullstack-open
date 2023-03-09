@@ -12,7 +12,7 @@ const getAllBlogs = async (search) => {
           },
           {
             author: {
-              [Op.ilike]: `%${search ?? ""}%`,
+              [Op.iLike]: `%${search ?? ""}%`,
             },
           },
         ],
