@@ -17,6 +17,7 @@ const getAllBlogs = async (search) => {
           },
         ],
       },
+      order: [["likes", "DESC"]],
     });
     return allBlogs;
   } catch (err) {
