@@ -37,9 +37,17 @@ const updateBlog = async (req, res, next) => {
   }
 };
 
+const getBlogsByAuthors = async (req, res, next) => {
+  try {
+  } catch (err) {
+    throw err;
+  }
+};
+
 module.exports = {
   getAllBlogs,
   deleteBlog,
   createBlog,
   updateBlog,
+  getBlogsByAuthors,
 };

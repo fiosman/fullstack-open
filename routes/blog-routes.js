@@ -3,6 +3,7 @@ const blogRouter = express.Router();
 const BlogController = require("../controllers/BlogController");
 
 blogRouter.get("/", BlogController.getAllBlogs);
+blogRouter.get("/authors", BlogController.getBlogsByAuthors);
 blogRouter.post("/", BlogController.createBlog);
 blogRouter.delete("/:id", BlogController.deleteBlog);
 blogRouter.put("/:id", BlogController.updateBlog);
