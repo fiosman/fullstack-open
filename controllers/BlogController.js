@@ -39,6 +39,8 @@ const updateBlog = async (req, res, next) => {
 
 const getBlogsByAuthors = async (req, res, next) => {
   try {
+    const authorBlogs = BlogService.getBlogsByAuthors();
+    res.json(authorBlogs);
   } catch (err) {
     throw err;
   }

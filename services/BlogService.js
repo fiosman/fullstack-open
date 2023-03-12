@@ -65,4 +65,11 @@ const updateBlog = async (blogData) => {
   }
 };
 
-module.exports = { getAllBlogs, deleteBlog, createBlog, updateBlog };
+const getBlogsByAuthors = async () => {
+  try {
+  } catch (err) {
+    throw err;
+  }
+};
+
+module.exports = { getAllBlogs, deleteBlog, createBlog, updateBlog, getBlogsByAuthors };
