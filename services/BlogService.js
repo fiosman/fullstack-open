@@ -1,4 +1,5 @@
 const Blog = require("../models").blog;
+const sequelize = require("../models").sequelize;
 
 const getAllBlogs = async (search) => {
   try {
@@ -67,6 +68,14 @@ const updateBlog = async (blogData) => {
 
 const getBlogsByAuthors = async () => {
   try {
+    const authors = await sequelize.query(
+      'SELECT "author", "COUNT("id") AS "articles", "likes" FROM "blogs" GROUP BY "author"',
+      {
+        type: sequelize.QueryTypes.SELECT,
+      }
+    );
+
+    return authors;
   } catch (err) {
     throw err;
   }
