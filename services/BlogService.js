@@ -69,7 +69,7 @@ const updateBlog = async (blogData) => {
 const getBlogsByAuthors = async () => {
   try {
     const authors = await sequelize.query(
-      'SELECT "author", "COUNT("id") AS "articles", "SUM("likes") AS "likes" FROM "blogs" GROUP BY "author" ORDER BY "likes"',
+      'SELECT "author", "COUNT("id") AS "articles", "SUM("likes") AS "likes" FROM "blogs" GROUP BY "author" ORDER BY "likes" DESC',
       {
         type: sequelize.QueryTypes.SELECT,
       }
