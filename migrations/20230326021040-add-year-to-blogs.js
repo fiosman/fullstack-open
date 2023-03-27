@@ -7,6 +7,10 @@ module.exports = {
       type: Sequelize.INTEGER,
       allowNull: false,
       defaultValue: 1991,
+      validate: {
+        min: 1991,
+        max: new Date().getFullYear(),
+      },
     });
   },
 
