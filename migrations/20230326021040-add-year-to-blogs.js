@@ -9,11 +9,11 @@ module.exports = {
       defaultValue: 1991,
       validate: {
         min: {
-          args: 1991,
+          args: [1991],
           msg: "Must be greater than or equal to 1991",
         },
         max: {
-          args: new Date().getFullYear(),
+          args: [new Date().getFullYear()],
           msg: "Cannot exceed current date",
         },
       },
