@@ -30,8 +30,16 @@ const editUsername = async (req, res, next) => {
   }
 };
 
+const getUserById = async (req, res, next) => {
+  try {
+  } catch (err) {
+    throw err;
+  }
+};
+
 module.exports = {
   getAllUsers,
   createUser,
   editUsername,
+  getUserById,
 };

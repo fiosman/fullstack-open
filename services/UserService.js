@@ -34,8 +34,16 @@ const editUsername = async (username, newUserData) => {
   }
 };
 
+const getUserById = async (userId) => {
+  try {
+  } catch (err) {
+    throw err;
+  }
+};
+
 module.exports = {
   getAllUsers,
   createUser,
   editUsername,
+  getUserById,
 };
