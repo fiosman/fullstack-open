@@ -32,6 +32,9 @@ const editUsername = async (req, res, next) => {
 
 const getUserById = async (req, res, next) => {
   try {
+    const { userId } = req.params;
+    const user = await UserService.getUserById(userId);
+    res.json(user);
   } catch (err) {
     throw err;
   }
