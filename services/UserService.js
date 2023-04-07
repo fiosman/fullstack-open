@@ -36,6 +36,8 @@ const editUsername = async (username, newUserData) => {
 
 const getUserById = async (userId) => {
   try {
+    const user = await User.findByPk(userId);
+    return user;
   } catch (err) {
     throw err;
   }
